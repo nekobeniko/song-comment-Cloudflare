@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>推し曲おすすめメーカー</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎶 推し曲おすすめメーカー</h1>
+            <p class="subtitle">あふれる想いを、AIが言語化！</p>
+        </header>
+
+        <main class="card">
+            <div class="input-group">
+                <label for="title">曲タイトル</label>
+                <input type="text" id="title" placeholder="例：春の嵐">
+            </div>
+
+            <div class="input-group">
+                <label for="genre">ジャンル</label>
+                <input type="text" id="genre" placeholder="例：爽やかロック、都会的なジャズ">
+            </div>
+
+            <div class="input-group">
+                <label for="toneSelect">出力タイプ（AIの性格）</label>
+                <select id="toneSelect">
+                    <option value="normal">熱いファン（標準）</option>
+                    <option value="otaku">限界オタク（語彙力消失）</option>
+                    <option value="critic">音楽評論家（プロ視点）</option>
+                    <option value="poem">ポエマー（エモさ重視）</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label for="lyrics">歌詞（全文コピペOK！）</label>
+                <textarea id="lyrics" placeholder="ここに歌詞を貼り付けてください。長い歌詞でも大丈夫！"></textarea>
+            </div>
+
+            <button id="submitBtn">✨ おすすめ文を作成！</button>
+        </main>
+
+        <div id="outputContainer" class="output-container" style="display: none;">
+            <div class="output-card">
+                <h3>📱 X（旧Twitter）用</h3>
+                <div id="outX" class="result-box"></div>
+                <button class="copy-btn" onclick="copyText('outX')">コピー</button>
+            </div>
+
+            <div class="output-card">
+                <h3>💬 ファンとしての感想</h3>
+                <div id="outReview" class="result-box"></div>
+                <button class="copy-btn" onclick="copyText('outReview')">コピー</button>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2024 推し曲おすすめメーカー</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
