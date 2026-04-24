@@ -17,7 +17,7 @@ document.getElementById('submitBtn').addEventListener('click', async () => {
 
   // 画面の準備
   btn.disabled = true;
-  btn.innerText = 'AIが熱唱中...';
+  btn.innerText = 'AIがおすすめ文章作成中...10秒待ってね';
   outputContainer.style.display = 'none';
 
   try {
